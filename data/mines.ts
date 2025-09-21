@@ -533,7 +533,46 @@ export const mines: Mine[] = [
     location: "North Yorkshire, United Kingdom",
     commodity: "Polyhalite (project)",
   },
-
+  {
+  name: "Mogalakwena",
+  ownership: [{ owner: C.ValterraPlatinum, ownership: 100 }],
+  location: "Limpopo, South Africa",
+  commodity: "PGMs",
+},
+{
+  name: "Amandelbult Complex (Dishaba & Tumela)",
+  ownership: [{ owner: C.ValterraPlatinum, ownership: 100 }],
+  location: "Limpopo, South Africa",
+  commodity: "PGMs",
+},
+{
+  name: "Mototolo",
+  ownership: [{ owner: C.ValterraPlatinum, ownership: 100 }],
+  location: "Limpopo, South Africa",
+  commodity: "PGMs",
+},
+{
+  name: "Modikwa",
+  ownership: [
+    { owner: C.ValterraPlatinum, ownership: 50 },
+    { owner: C.AfricanRainbowMinerals, ownership: 41.5 },
+    { owner: C.ModikwaCommunities, ownership: 8.5 },
+  ],
+  location: "Limpopo, South Africa",
+  commodity: "PGMs",
+},
+{
+  name: "Unki",
+  ownership: [{ owner: C.ValterraPlatinum, ownership: 100 }],
+  location: "Shurugwi, Midlands, Zimbabwe",
+  commodity: "PGMs",
+},
+{
+  name: "Twickenham (care & maintenance)",
+  ownership: [{ owner: C.ValterraPlatinum, ownership: 100 }],
+  location: "Limpopo, South Africa",
+  commodity: "PGMs",
+},
   //   {
   //     name: "",
   //     ownership: [{ owner: C., ownership:  }],

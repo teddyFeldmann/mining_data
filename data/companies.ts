@@ -41,6 +41,9 @@ export const Companies = {
   ChinaBaowuSteelGroup: { name: "China Baowu Steel Group" },
   HancockProspecting: {name: "Hancock Prospecting" },
   NipponSteel: { name: "Nippon Steel" },
+  ValterraPlatinum: { name: "Valterra Platinum" },
+  AfricanRainbowMinerals: { name: "African Rainbow Minerals" },
+  ModikwaCommunities: { name: "Modikwa Communities" },
 } as const satisfies Record<string, Company>;
 
 export type CompanyKey = keyof typeof Companies;
