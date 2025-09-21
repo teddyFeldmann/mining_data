@@ -44,6 +44,22 @@ export const Companies = {
   ValterraPlatinum: { name: "Valterra Platinum" },
   AfricanRainbowMinerals: { name: "African Rainbow Minerals" },
   ModikwaCommunities: { name: "Modikwa Communities" },
+  SumitomoMetalMiningArizona: { name: "Sumitomo Metal Mining Arizona Inc." },
+  SMMMorenci: { name: "SMM Morenci Inc." },
+  SMMCerroVerde: { name: "Sumitomo Metal Mining (SMM) - Cerro Verde Netherlands B.V." },
+  Buenaventura: { name: "Compañía de Minas Buenaventura S.A.A." },
+  PublicShareholdersLima: { name: "Public shareholders (Lima SE)" },
+  Codelco: { name: "Codelco" },
+  MINDIT: { name: "MIND ID & PT Indonesia Papua Metal Dan Mineral" },
+  Asarco: { name: "ASARCO" },
+  CapstoneCopper: { name: "Capstone Copper" },
+  MitsubishiMaterials: { name: "Mitsubishi Materials Corporation" },
+  SouthernCopper: { name: "Southern Copper" },
+  AgnicoEagle: { name: "Agnico Eagle" },
+  Maaden: { name: "Ma'aden" },
+  BarrickGold: { name: "Barrick Gold" },
+  SABIC: { name: "SABIC" },
+  Alcoa: { name: "Alcoa (AWA Saudi Limited)" },
 } as const satisfies Record<string, Company>;
 
 export type CompanyKey = keyof typeof Companies;

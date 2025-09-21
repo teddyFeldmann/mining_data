@@ -28,8 +28,9 @@ type Row = { mine: (typeof mines)[number]; percent: number };
 const columns: Column<Row>[] = [
   { header: "Mine",      cell: (r) => <strong>{r.mine.name}</strong> },
   { header: "Location",  cell: (r) => r.mine.location },
-  { header: "Commodity", cell: (r) => r.mine.commodity },
+  { header: "Commodity", cell: (r) => r.mine.commodity.join(", ") },
   { header: "Stake",     cell: (r) => formatPercent(r.percent) },
+  { header: "Stage", cell: (r) => r.mine.stage },
 ];
 
 export default function CompanyPage({ params }: { params: { slug: string } }) {

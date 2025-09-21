@@ -2,7 +2,8 @@ export interface Mine {
   name: string;
   ownership: Ownership[];
   location: string;
-  commodity: string;
+  commodity: string[];
+  stage: string;
 }
 
 export interface Company {

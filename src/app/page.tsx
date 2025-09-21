@@ -11,8 +11,9 @@ type MineRow = (typeof mines)[number];
 const columns: Column<MineRow>[] = [
   { header: "Mine",      cell: (m) => <strong>{m.name}</strong> },
   { header: "Location",  cell: (m) => m.location },
-  { header: "Commodity", cell: (m) => m.commodity },
+  { header: "Commodity", cell: (m) => m.commodity.join(", ") },
   { header: "Ownership", cell: (m) => <OwnershipInlineLinks owners={m.ownership} /> },
+  { header: "Stage", cell: (m) => m.stage },
 ];
 
 export default function Page() {
