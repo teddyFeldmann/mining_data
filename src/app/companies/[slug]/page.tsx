@@ -1,9 +1,11 @@
+// src/app/companies/[slug]/page.tsx
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { mines } from "../../../../data/mines";
-import { companySlug } from "@/utils/slug";
+import { companySlug, formatPercent } from "../../../utils/utils";
+import { DataTable, type Column } from "../../../components/DataTable";
 
-// Build an index of companies from the data
+// Build a slug → company-name(s) index from the data
 const allCompanyNames = Array.from(
   new Set(mines.flatMap((m) => m.ownership.map((o) => o.owner.name)))
 );
@@ -16,29 +18,32 @@ for (const n of allCompanyNames) {
   slugToNames.set(s, arr);
 }
 
+// Pre-render a page for each company
 export function generateStaticParams() {
-  // Pre-render a page for each company we find in the dataset
   return Array.from(slugToNames.keys()).map((slug) => ({ slug }));
 }
 
-const formatPercent = (n: number) =>
-  Number.isInteger(n) ? `${n}%` : `${parseFloat(n.toFixed(1))}%`;
+type Row = { mine: (typeof mines)[number]; percent: number };
 
-export default function CompanyPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+const columns: Column<Row>[] = [
+  { header: "Mine",      cell: (r) => <strong>{r.mine.name}</strong> },
+  { header: "Location",  cell: (r) => r.mine.location },
+  { header: "Commodity", cell: (r) => r.mine.commodity },
+  { header: "Stake",     cell: (r) => formatPercent(r.percent) },
+];
+
+export default function CompanyPage({ params }: { params: { slug: string } }) {
   const names = slugToNames.get(params.slug) ?? [];
   if (!names.length) return notFound();
 
-  const displayName = names[0]; // pick the first matching name for title
-  const companyMines = mines
+  const displayName = names[0];
+
+  const rows: Row[] = mines
     .map((m) => {
-      const ownerEntry = m.ownership.find((o) => names.includes(o.owner.name));
-      return ownerEntry ? { mine: m, percent: ownerEntry.ownership } : null;
+      const entry = m.ownership.find((o) => names.includes(o.owner.name));
+      return entry ? { mine: m, percent: entry.ownership } : null;
     })
-    .filter(Boolean) as { mine: (typeof mines)[number]; percent: number }[];
+    .filter(Boolean) as Row[];
 
   return (
     <main className="p-6 space-y-4">
@@ -49,30 +54,7 @@ export default function CompanyPage({
         </Link>
       </div>
 
-      {companyMines.length === 0 ? (
-        <p>No mines found for this company.</p>
-      ) : (
-        <table className="border-collapse border border-gray-300 w-full text-sm">
-          <thead className="bg-gray-100">
-            <tr>
-              <th className="border p-2 text-left">Mine</th>
-              <th className="border p-2 text-left">Location</th>
-              <th className="border p-2 text-left">Commodity</th>
-              <th className="border p-2 text-left">Ownership</th>
-            </tr>
-          </thead>
-          <tbody>
-            {companyMines.map(({ mine, percent }) => (
-              <tr key={mine.name} className="odd:bg-white even:bg-gray-50">
-                <td className="border p-2">{mine.name}</td>
-                <td className="border p-2">{mine.location}</td>
-                <td className="border p-2">{mine.commodity}</td>
-                <td className="border p-2">{formatPercent(percent)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
+      <DataTable columns={columns} data={rows} getRowKey={(r) => r.mine.name} />
     </main>
   );
 }
