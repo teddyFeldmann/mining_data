@@ -7,21 +7,21 @@ export const mines: Mine[] = [
     ownership: [{ owner: C.MPMaterials, ownership: 100 }],
     location: "California, USA",
     commodity: ["Rare Earths"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Bayan Obo",
     ownership: [{ owner: C.BaotouSteelRareEarthGroup, ownership: 100 }],
     location: "Inner Mongolia, China",
     commodity: ["Rare Earths"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Mt Weld",
     ownership: [{ owner: C.LynasRareEarths, ownership: 100 }],
     location: "Western Australia",
     commodity: ["Rare Earths"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Grasberg",
@@ -31,28 +31,28 @@ export const mines: Mine[] = [
     ],
     location: "Papua, Indonesia",
     commodity: ["Copper", "Gold"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Carlin Trend",
     ownership: [{ owner: C.NevadaGoldMines, ownership: 100 }],
     location: "Nevada, USA",
     commodity: ["Gold"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Muruntau",
     ownership: [{ owner: C.NavoiMiningAndMetallurgyCombinat, ownership: 100 }],
     location: "Uzbekistan",
     commodity: ["Gold"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "South Deep",
     ownership: [{ owner: C.GoldFields, ownership: 100 }],
     location: "Gauteng, South Africa",
     commodity: ["Gold"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Greenbushes",
@@ -62,14 +62,14 @@ export const mines: Mine[] = [
     ],
     location: "Western Australia",
     commodity: ["Lithium"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Thacker Pass",
     ownership: [{ owner: C.LithiumAmericas, ownership: 100 }],
     location: "Nevada, USA",
     commodity: ["Lithium"],
-    stage: "Construction"
+    stage: "Construction",
   },
   {
     name: "Salar de Atacama",
@@ -79,56 +79,56 @@ export const mines: Mine[] = [
     ],
     location: "Chile",
     commodity: ["Lithium"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Voisey's Bay",
     ownership: [{ owner: C.Vale, ownership: 100 }],
     location: "Labrador, Canada",
     commodity: ["Nickel"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Nornickel Operations",
     ownership: [{ owner: C.Nornickel, ownership: 100 }],
     location: "Norilsk, Russia",
     commodity: ["Nickel"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "NISK",
     ownership: [{ owner: C.PowerMetallic, ownership: 100 }],
     location: "Quebec, Canada",
     commodity: ["Nickel"],
-    stage: "Exploration"
+    stage: "Exploration",
   },
   {
     name: "Carajás",
     ownership: [{ owner: C.Vale, ownership: 100 }],
     location: "Pará, Brazil",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Hamersley",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Sishen",
     ownership: [{ owner: C.AngloAmerican, ownership: 100 }],
     location: "Northern Cape, South Africa",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Borax Mine",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Boron, California, USA",
     commodity: ["Borates"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Kolwezi",
@@ -139,7 +139,7 @@ export const mines: Mine[] = [
     ],
     location: "Lualaba Province, DRC",
     commodity: ["Copper"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Kamoa-Kakula",
@@ -151,14 +151,14 @@ export const mines: Mine[] = [
     ],
     location: "Lualaba Province, DRC",
     commodity: ["Copper"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Akyem",
     ownership: [{ owner: C.ZijinMining, ownership: 100 }],
     location: "Eastern Region, Ghana",
     commodity: ["Gold"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Garatau",
@@ -168,70 +168,70 @@ export const mines: Mine[] = [
     ],
     location: "Fetakgomo Tubase, South Africa",
     commodity: ["PGMs"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Gudai-Darri",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Tom Price",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Paraburdoo",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Marandoo",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Brockman 2",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Brockman 4",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Nammuldi / Western Turner Syncline",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Silvergrass",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Yandicoogina",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "West Angelas (Robe River JV)",
@@ -242,7 +242,7 @@ export const mines: Mine[] = [
     ],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Robe Valley - Mesa A",
@@ -253,7 +253,7 @@ export const mines: Mine[] = [
     ],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Robe Valley - Mesa J",
@@ -264,7 +264,7 @@ export const mines: Mine[] = [
     ],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Hope Downs 1",
@@ -274,7 +274,7 @@ export const mines: Mine[] = [
     ],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Hope Downs 4",
@@ -284,7 +284,7 @@ export const mines: Mine[] = [
     ],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Western Range",
@@ -294,7 +294,7 @@ export const mines: Mine[] = [
     ],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Iron Ore Company of Canada (IOC)",
@@ -305,35 +305,35 @@ export const mines: Mine[] = [
     ],
     location: "Labrador & Quebec, Canada",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Weipa-Amrun",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Queensland, Australia",
     commodity: ["Bauxite"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Gove",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Northern Territory, Australia",
     commodity: ["Bauxite"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Boron (U.S. Borax)",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Boron, California, USA",
     commodity: ["Borates"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Diavik",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Northwest Territories, Canada",
     commodity: ["Diamonds"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Richards Bay Minerals (RBM)",
@@ -343,7 +343,7 @@ export const mines: Mine[] = [
     ],
     location: "KwaZulu-Natal, South Africa",
     commodity: ["Ilmenite", "Rutile", "Zircon"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "QIT Madagascar Minerals (QMM)",
@@ -353,21 +353,21 @@ export const mines: Mine[] = [
     ],
     location: "Fort Dauphin, Madagascar",
     commodity: ["Ilmenite"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Lac Tio (QIT Fer et Titane)",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Québec, Canada",
     commodity: ["Ilmenite"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Kennecott (Bingham Canyon)",
     ownership: [{ owner: C.RioTinto, ownership: 100 }],
     location: "Utah, USA",
     commodity: ["Copper"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Oyu Tolgoi",
@@ -377,7 +377,7 @@ export const mines: Mine[] = [
     ],
     location: "Ömnögovi, Mongolia",
     commodity: ["Copper", "Gold"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Resolution Copper",
@@ -387,7 +387,7 @@ export const mines: Mine[] = [
     ],
     location: "Arizona, USA",
     commodity: ["Copper"],
-    stage: "Exploration"
+    stage: "Exploration",
   },
   {
     name: "Escondida",
@@ -398,42 +398,42 @@ export const mines: Mine[] = [
     ],
     location: "Antofagasta, Chile",
     commodity: ["Copper"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Spence (Pampa Norte)",
     ownership: [{ owner: C.BHP, ownership: 100 }],
     location: "Antofagasta, Chile",
     commodity: ["Copper"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Olympic Dam",
     ownership: [{ owner: C.BHP, ownership: 100 }],
     location: "South Australia, Australia",
     commodity: ["Copper", "Uranium", "Gold", "Silver"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Prominent Hill",
     ownership: [{ owner: C.BHP, ownership: 100 }],
     location: "South Australia, Australia",
     commodity: ["Copper", "Gold"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Carrapateena",
     ownership: [{ owner: C.BHP, ownership: 100 }],
     location: "South Australia, Australia",
     commodity: ["Copper", "Gold"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Jansen (Stage 1)",
     ownership: [{ owner: C.BHP, ownership: 100 }],
     location: "Saskatchewan, Canada",
     commodity: ["Potash"],
-    stage: "Construction"
+    stage: "Construction",
   },
   {
     name: "South Flank (Mining Area C hub)",
@@ -444,7 +444,7 @@ export const mines: Mine[] = [
     ],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Jimblebar",
@@ -455,7 +455,7 @@ export const mines: Mine[] = [
     ],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Newman (Mt Whaleback & satellites)",
@@ -466,7 +466,7 @@ export const mines: Mine[] = [
     ],
     location: "Pilbara, Western Australia",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Goonyella Riverside (BMA)",
@@ -476,7 +476,7 @@ export const mines: Mine[] = [
     ],
     location: "Queensland, Australia",
     commodity: ["Steelmaking Coal"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Broadmeadow (BMA)",
@@ -486,7 +486,7 @@ export const mines: Mine[] = [
     ],
     location: "Queensland, Australia",
     commodity: ["Steelmaking Coal"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Peak Downs (BMA)",
@@ -496,7 +496,7 @@ export const mines: Mine[] = [
     ],
     location: "Queensland, Australia",
     commodity: ["Steelmaking Coal"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Saraji (BMA)",
@@ -506,7 +506,7 @@ export const mines: Mine[] = [
     ],
     location: "Queensland, Australia",
     commodity: ["Steelmaking Coal"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Caval Ridge (BMA)",
@@ -516,7 +516,7 @@ export const mines: Mine[] = [
     ],
     location: "Queensland, Australia",
     commodity: ["Steelmaking Coal"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Quellaveco",
@@ -526,7 +526,7 @@ export const mines: Mine[] = [
     ],
     location: "Moquegua, Peru",
     commodity: ["Copper"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Collahuasi",
@@ -537,7 +537,7 @@ export const mines: Mine[] = [
     ],
     location: "Tarapacá, Chile",
     commodity: ["Copper"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Los Bronces",
@@ -548,7 +548,7 @@ export const mines: Mine[] = [
     ],
     location: "Metropolitan Region, Chile",
     commodity: ["Copper"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "El Soldado",
@@ -559,21 +559,21 @@ export const mines: Mine[] = [
     ],
     location: "Valparaíso, Chile",
     commodity: ["Copper"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Sishen (Kumba Iron Ore)",
     ownership: [{ owner: C.AngloAmerican, ownership: 100 }],
     location: "Northern Cape, South Africa",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Kolomela (Kumba Iron Ore)",
     ownership: [{ owner: C.AngloAmerican, ownership: 100 }],
     location: "Northern Cape, South Africa",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Minas-Rio",
@@ -583,418 +583,736 @@ export const mines: Mine[] = [
     ],
     location: "Minas Gerais, Brazil",
     commodity: ["Iron Ore"],
-    stage: "Production"
+    stage: "Production",
   },
   {
     name: "Woodsmith",
     ownership: [{ owner: C.AngloAmerican, ownership: 100 }],
     location: "North Yorkshire, United Kingdom",
     commodity: ["Polyhalite"],
-    stage: "Construction"
+    stage: "Construction",
   },
   {
-  name: "Mogalakwena",
-  ownership: [{ owner: C.ValterraPlatinum, ownership: 100 }],
-  location: "Limpopo, South Africa",
-  commodity: ["PGMs"],
-  stage: "Production"
-},
-{
-  name: "Amandelbult Complex (Dishaba & Tumela)",
-  ownership: [{ owner: C.ValterraPlatinum, ownership: 100 }],
-  location: "Limpopo, South Africa",
-  commodity: ["PGMs"],
-  stage: "Production"
-},
-{
-  name: "Mototolo",
-  ownership: [{ owner: C.ValterraPlatinum, ownership: 100 }],
-  location: "Limpopo, South Africa",
-  commodity: ["PGMs"],
-  stage: "Production"
-},
-{
-  name: "Modikwa",
-  ownership: [
-    { owner: C.ValterraPlatinum, ownership: 50 },
-    { owner: C.AfricanRainbowMinerals, ownership: 41.5 },
-    { owner: C.ModikwaCommunities, ownership: 8.5 },
-  ],
-  location: "Limpopo, South Africa",
-  commodity: ["PGMs"],
-  stage: "Production"
-},
-{
-  name: "Unki",
-  ownership: [{ owner: C.ValterraPlatinum, ownership: 100 }],
-  location: "Shurugwi, Midlands, Zimbabwe",
-  commodity: ["PGMs"],
-  stage: "Production"
-},
-{
-  name: "Twickenham (care & maintenance)",
-  ownership: [{ owner: C.ValterraPlatinum, ownership: 100 }],
-  location: "Limpopo, South Africa",
-  commodity: ["PGMs"],
-  stage: "Production"
-},
-{
-  name: "Morenci",
-  ownership: [
-    { owner: C.FreeportMcMoRan, ownership: 72 },
-    { owner: C.SumitomoMetalMiningArizona, ownership: 15 },
-    { owner: C.SMMMorenci, ownership: 13 },
-  ],
-  location: "Greenlee County, Arizona, USA",
-  commodity: ["Copper"],
-  stage: "Production"
-},
-{
-  name: "Bagdad",
-  ownership: [{ owner: C.FreeportMcMoRan, ownership: 100 }],
-  location: "Yavapai County, Arizona, USA",
-  commodity: ["Copper", "Molybdenum"],
-  stage: "Production"
-},
-{
-  name: "Sierrita",
-  ownership: [{ owner: C.FreeportMcMoRan, ownership: 100 }],
-  location: "Pima County, Arizona, USA",
-  commodity: ["Copper", "Molybdenum"],
-  stage: "Production"
-},
-{
-  name: "Miami",
-  ownership: [{ owner: C.FreeportMcMoRan, ownership: 100 }],
-  location: "Gila County, Arizona, USA",
-  commodity: ["Copper"],
-  stage: "Production"
-},
-{
-  name: "Safford (Lone Star)",
-  ownership: [{ owner: C.FreeportMcMoRan, ownership: 100 }],
-  location: "Graham County, Arizona, USA",
-  commodity: ["Copper"],
-  stage: "Production"
-},
-{
-  name: "Chino",
-  ownership: [{ owner: C.FreeportMcMoRan, ownership: 100 }],
-  location: "Grant County, New Mexico, USA",
-  commodity: ["Copper"],
-  stage: "Production"
-},
-{
-  name: "Tyrone",
-  ownership: [{ owner: C.FreeportMcMoRan, ownership: 100 }],
-  location: "Grant County, New Mexico, USA",
-  commodity: ["Copper"],
-  stage: "Production"
-},
-{
-  name: "Cerro Verde",
-  ownership: [
-    { owner: C.FreeportMcMoRan, ownership: 55.08 },
-    { owner: C.SMMCerroVerde, ownership: 21 },
-    { owner: C.Buenaventura, ownership: 19.58 },
-    { owner: C.PublicShareholdersLima, ownership: 4.34 },
-  ],
-  location: "Arequipa, Peru",
-  commodity: ["Copper", "Molybdenum"],
-  stage: "Production"
-},
-{
-  name: "El Abra",
-  ownership: [
-    { owner: C.FreeportMcMoRan, ownership: 51 },
-    { owner: C.Codelco, ownership: 49 },
-  ],
-  location: "El Loa Province, Antofagasta, Chile",
-  commodity: ["Copper"],
-  stage: "Production"
-},
-{
-  name: "Grasberg (PT Freeport Indonesia)",
-  ownership: [
-    { owner: C.FreeportMcMoRan, ownership: 48.76 },
-    { owner: C.MINDIT, ownership: 51.24 },
-  ],
-  location: "Central Papua, Indonesia",
-  commodity: ["Copper", "Gold"],
-  stage: "Production"
-},
-{
-  name: "Mission Complex",
-  ownership: [{ owner: C.Asarco, ownership: 100 }],
-  location: "Pima County, Arizona, USA",
-  commodity: ["Copper"],
-  stage: "Production"
-},
-{
-  name: "Ray",
-  ownership: [{ owner: C.Asarco, ownership: 100 }],
-  location: "Pinal County, Arizona, USA",
-  commodity: ["Copper"],
-  stage: "Production"
-},
-{
-  name: "Silver Bell",
-  ownership: [{ owner: C.Asarco, ownership: 100 }],
-  location: "Pima County, Arizona, USA",
-  commodity: ["Copper"],
-  stage: "Production"
-},
-{
-  name: "Pinto Valley",
-  ownership: [{ owner: C.CapstoneCopper, ownership: 100 }],
-  location: "Globe-Miami District, Arizona, USA",
-  commodity: ["Copper", "Molybdenum"],
-  stage: "Production"
-},
-{
-  name: "Cozamin",
-  ownership: [{ owner: C.CapstoneCopper, ownership: 100 }],
-  location: "Zacatecas, Mexico",
-  commodity: ["Copper", "Silver", "Gold", "Zinc", "Lead"],
-  stage: "Production"
-},
-{
-  name: "Mantos Blancos",
-  ownership: [{ owner: C.CapstoneCopper, ownership: 100 }],
-  location: "Antofagasta, Chile",
-  commodity: ["Copper", "Silver"],
-  stage: "Production"
-},
-{
-  name: "Mantoverde",
-  ownership: [
-    { owner: C.CapstoneCopper, ownership: 70 },
-    { owner: C.MitsubishiMaterials, ownership: 30 },
-  ],
-  location: "Atacama, Chile",
-  commodity: ["Copper"],
-  stage: "Production"
-},
-{
-  name: "Santo Domingo",
-  ownership: [{ owner: C.CapstoneCopper, ownership: 100 }],
-  location: "Atacama, Chile",
-  commodity: ["Copper", "Iron", "Gold"],
-  stage: "Exploration"
-},
-{
-  name: "Buenavista del Cobre (Cananea)",
-  ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
-  location: "Sonora, Mexico",
-  commodity: ["Copper"],
-  stage: "Production",
-},
-{
-  name: "La Caridad",
-  ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
-  location: "Sonora, Mexico",
-  commodity: ["Copper"],
-  stage: "Production",
-},
-{
-  name: "Toquepala",
-  ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
-  location: "Tacna, Peru",
-  commodity: ["Copper"],
-  stage: "Production",
-},
-{
-  name: "Cuajone",
-  ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
-  location: "Moquegua, Peru",
-  commodity: ["Copper"],
-  stage: "Production",
-},
-{
-  name: "Pilares (La Caridad satellite)",
-  ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
-  location: "Sonora, Mexico",
-  commodity: ["Copper"],
-  stage: "Production",
-},
-{
-  name: "Tía María",
-  ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
-  location: "Arequipa, Peru",
-  commodity: ["Copper"],
-  stage: "Exploration",
-},
-{
-  name: "Los Chancas",
-  ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
-  location: "Apurímac, Peru",
-  commodity: ["Copper", "Molybdenum", "Gold"],
-  stage: "Exploration",
-},
-{
-  name: "El Arco",
-  ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
-  location: "Baja California, Mexico",
-  commodity: ["Copper", "Gold"],
-  stage: "Exploration",
-},
-{
-  name: "Detour Lake",
-  ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
-  location: "Ontario, Canada",
-  commodity: ["Gold"],
-  stage: "Production",
-},
-{
-  name: "Canadian Malartic Complex (Odyssey)",
-  ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
-  location: "Quebec, Canada",
-  commodity: ["Gold"],
-  stage: "Production",
-},
-{
-  name: "LaRonde Complex",
-  ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
-  location: "Quebec, Canada",
-  commodity: ["Gold"],
-  stage: "Production",
-},
-{
-  name: "Goldex",
-  ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
-  location: "Quebec, Canada",
-  commodity: ["Gold"],
-  stage: "Production",
-},
-{
-  name: "Macassa",
-  ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
-  location: "Ontario, Canada",
-  commodity: ["Gold"],
-  stage: "Production",
-},
-{
-  name: "Meliadine",
-  ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
-  location: "Nunavut, Canada",
-  commodity: ["Gold"],
-  stage: "Production",
-},
-{
-  name: "Meadowbank (Amaruq)",
-  ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
-  location: "Nunavut, Canada",
-  commodity: ["Gold"],
-  stage: "Production",
-},
-{
-  name: "Kittilä",
-  ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
-  location: "Lapland, Finland",
-  commodity: ["Gold"],
-  stage: "Production",
-},
-{
-  name: "Fosterville",
-  ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
-  location: "Victoria, Australia",
-  commodity: ["Gold"],
-  stage: "Production",
-},
-{
-  name: "Pinos Altos",
-  ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
-  location: "Chihuahua, Mexico",
-  commodity: ["Gold", "Silver"],
-  stage: "Production",
-},
-{
-  name: "La India",
-  ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
-  location: "Sonora, Mexico",
-  commodity: ["Gold"],
-  stage: "Production",
-},
-{
-  name: "Hope Bay",
-  ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
-  location: "Nunavut, Canada",
-  commodity: ["Gold"],
-  stage: "Exploration",
-},
-{
-  name: "Ad Duwayhi",
-  ownership: [{ owner: C.Maaden, ownership: 100 }],
-  location: "Makkah Region, Saudi Arabia",
-  commodity: ["Gold"],
-  stage: "Production",
-},
-{
-  name: "Mansourah-Massarah",
-  ownership: [{ owner: C.Maaden, ownership: 100 }],
-  location: "Makkah Region, Saudi Arabia",
-  commodity: ["Gold"],
-  stage: "Production",
-},
-{
-  name: "Mahd Ad Dhahab",
-  ownership: [{ owner: C.Maaden, ownership: 100 }],
-  location: "Al Madinah Region, Saudi Arabia",
-  commodity: ["Gold"],
-  stage: "Production",
-},
-{
-  name: "Al Amar",
-  ownership: [{ owner: C.Maaden, ownership: 100 }],
-  location: "Riyadh Region, Saudi Arabia",
-  commodity: ["Gold", "Copper"],
-  stage: "Production",
-},
-{
-  name: "Bulghah & Sukhaybarat",
-  ownership: [{ owner: C.Maaden, ownership: 100 }],
-  location: "Al Madinah Region, Saudi Arabia",
-  commodity: ["Gold"],
-  stage: "Production",
-},
-{
-  name: "As Suq",
-  ownership: [{ owner: C.Maaden, ownership: 100 }],
-  location: "Makkah Region, Saudi Arabia",
-  commodity: ["Gold"],
-  stage: "Production",
-},
-{
-  name: "Jabal Sayid",
-  ownership: [
-    { owner: C.Maaden, ownership: 50 },
-    { owner: C.BarrickGold, ownership: 50 },
-  ],
-  location: "Madinah Region, Saudi Arabia",
-  commodity: ["Copper"],
-  stage: "Production",
-},
-{
-  name: "Al Jalamid",
-  ownership: [
-    { owner: C.Maaden, ownership: 70 },
-    { owner: C.SABIC, ownership: 30 },
-  ],
-  location: "Northern Borders Region, Saudi Arabia",
-  commodity: ["Phosphate"],
-  stage: "Production",
-},
-{
-  name: "Al Ba'itha (Bauxite)",
-  ownership: [
-    { owner: C.Maaden, ownership: 74.9 },
-    { owner: C.Alcoa, ownership: 25.1 },
-  ],
-  location: "Al-Qassim Region, Saudi Arabia",
-  commodity: ["Bauxite"],
-  stage: "Production",
-},
-
+    name: "Mogalakwena",
+    ownership: [{ owner: C.ValterraPlatinum, ownership: 100 }],
+    location: "Limpopo, South Africa",
+    commodity: ["PGMs"],
+    stage: "Production",
+  },
+  {
+    name: "Amandelbult Complex (Dishaba & Tumela)",
+    ownership: [{ owner: C.ValterraPlatinum, ownership: 100 }],
+    location: "Limpopo, South Africa",
+    commodity: ["PGMs"],
+    stage: "Production",
+  },
+  {
+    name: "Mototolo",
+    ownership: [{ owner: C.ValterraPlatinum, ownership: 100 }],
+    location: "Limpopo, South Africa",
+    commodity: ["PGMs"],
+    stage: "Production",
+  },
+  {
+    name: "Modikwa",
+    ownership: [
+      { owner: C.ValterraPlatinum, ownership: 50 },
+      { owner: C.AfricanRainbowMinerals, ownership: 41.5 },
+      { owner: C.ModikwaCommunities, ownership: 8.5 },
+    ],
+    location: "Limpopo, South Africa",
+    commodity: ["PGMs"],
+    stage: "Production",
+  },
+  {
+    name: "Unki",
+    ownership: [{ owner: C.ValterraPlatinum, ownership: 100 }],
+    location: "Shurugwi, Midlands, Zimbabwe",
+    commodity: ["PGMs"],
+    stage: "Production",
+  },
+  {
+    name: "Twickenham (care & maintenance)",
+    ownership: [{ owner: C.ValterraPlatinum, ownership: 100 }],
+    location: "Limpopo, South Africa",
+    commodity: ["PGMs"],
+    stage: "Production",
+  },
+  {
+    name: "Morenci",
+    ownership: [
+      { owner: C.FreeportMcMoRan, ownership: 72 },
+      { owner: C.SumitomoMetalMiningArizona, ownership: 15 },
+      { owner: C.SMMMorenci, ownership: 13 },
+    ],
+    location: "Greenlee County, Arizona, USA",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Bagdad",
+    ownership: [{ owner: C.FreeportMcMoRan, ownership: 100 }],
+    location: "Yavapai County, Arizona, USA",
+    commodity: ["Copper", "Molybdenum"],
+    stage: "Production",
+  },
+  {
+    name: "Sierrita",
+    ownership: [{ owner: C.FreeportMcMoRan, ownership: 100 }],
+    location: "Pima County, Arizona, USA",
+    commodity: ["Copper", "Molybdenum"],
+    stage: "Production",
+  },
+  {
+    name: "Miami",
+    ownership: [{ owner: C.FreeportMcMoRan, ownership: 100 }],
+    location: "Gila County, Arizona, USA",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Safford (Lone Star)",
+    ownership: [{ owner: C.FreeportMcMoRan, ownership: 100 }],
+    location: "Graham County, Arizona, USA",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Chino",
+    ownership: [{ owner: C.FreeportMcMoRan, ownership: 100 }],
+    location: "Grant County, New Mexico, USA",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Tyrone",
+    ownership: [{ owner: C.FreeportMcMoRan, ownership: 100 }],
+    location: "Grant County, New Mexico, USA",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Cerro Verde",
+    ownership: [
+      { owner: C.FreeportMcMoRan, ownership: 55.08 },
+      { owner: C.SMMCerroVerde, ownership: 21 },
+      { owner: C.Buenaventura, ownership: 19.58 },
+      { owner: C.PublicShareholdersLima, ownership: 4.34 },
+    ],
+    location: "Arequipa, Peru",
+    commodity: ["Copper", "Molybdenum"],
+    stage: "Production",
+  },
+  {
+    name: "El Abra",
+    ownership: [
+      { owner: C.FreeportMcMoRan, ownership: 51 },
+      { owner: C.Codelco, ownership: 49 },
+    ],
+    location: "El Loa Province, Antofagasta, Chile",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Grasberg (PT Freeport Indonesia)",
+    ownership: [
+      { owner: C.FreeportMcMoRan, ownership: 48.76 },
+      { owner: C.MINDIT, ownership: 51.24 },
+    ],
+    location: "Central Papua, Indonesia",
+    commodity: ["Copper", "Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Mission Complex",
+    ownership: [{ owner: C.Asarco, ownership: 100 }],
+    location: "Pima County, Arizona, USA",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Ray",
+    ownership: [{ owner: C.Asarco, ownership: 100 }],
+    location: "Pinal County, Arizona, USA",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Silver Bell",
+    ownership: [{ owner: C.Asarco, ownership: 100 }],
+    location: "Pima County, Arizona, USA",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Pinto Valley",
+    ownership: [{ owner: C.CapstoneCopper, ownership: 100 }],
+    location: "Globe-Miami District, Arizona, USA",
+    commodity: ["Copper", "Molybdenum"],
+    stage: "Production",
+  },
+  {
+    name: "Cozamin",
+    ownership: [{ owner: C.CapstoneCopper, ownership: 100 }],
+    location: "Zacatecas, Mexico",
+    commodity: ["Copper", "Silver", "Gold", "Zinc", "Lead"],
+    stage: "Production",
+  },
+  {
+    name: "Mantos Blancos",
+    ownership: [{ owner: C.CapstoneCopper, ownership: 100 }],
+    location: "Antofagasta, Chile",
+    commodity: ["Copper", "Silver"],
+    stage: "Production",
+  },
+  {
+    name: "Mantoverde",
+    ownership: [
+      { owner: C.CapstoneCopper, ownership: 70 },
+      { owner: C.MitsubishiMaterials, ownership: 30 },
+    ],
+    location: "Atacama, Chile",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Santo Domingo",
+    ownership: [{ owner: C.CapstoneCopper, ownership: 100 }],
+    location: "Atacama, Chile",
+    commodity: ["Copper", "Iron", "Gold"],
+    stage: "Exploration",
+  },
+  {
+    name: "Buenavista del Cobre (Cananea)",
+    ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
+    location: "Sonora, Mexico",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "La Caridad",
+    ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
+    location: "Sonora, Mexico",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Toquepala",
+    ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
+    location: "Tacna, Peru",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Cuajone",
+    ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
+    location: "Moquegua, Peru",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Pilares (La Caridad satellite)",
+    ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
+    location: "Sonora, Mexico",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Tía María",
+    ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
+    location: "Arequipa, Peru",
+    commodity: ["Copper"],
+    stage: "Exploration",
+  },
+  {
+    name: "Los Chancas",
+    ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
+    location: "Apurímac, Peru",
+    commodity: ["Copper", "Molybdenum", "Gold"],
+    stage: "Exploration",
+  },
+  {
+    name: "El Arco",
+    ownership: [{ owner: C.SouthernCopper, ownership: 100 }],
+    location: "Baja California, Mexico",
+    commodity: ["Copper", "Gold"],
+    stage: "Exploration",
+  },
+  {
+    name: "Detour Lake",
+    ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
+    location: "Ontario, Canada",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Canadian Malartic Complex (Odyssey)",
+    ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
+    location: "Quebec, Canada",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "LaRonde Complex",
+    ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
+    location: "Quebec, Canada",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Goldex",
+    ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
+    location: "Quebec, Canada",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Macassa",
+    ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
+    location: "Ontario, Canada",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Meliadine",
+    ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
+    location: "Nunavut, Canada",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Meadowbank (Amaruq)",
+    ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
+    location: "Nunavut, Canada",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Kittilä",
+    ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
+    location: "Lapland, Finland",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Fosterville",
+    ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
+    location: "Victoria, Australia",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Pinos Altos",
+    ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
+    location: "Chihuahua, Mexico",
+    commodity: ["Gold", "Silver"],
+    stage: "Production",
+  },
+  {
+    name: "La India",
+    ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
+    location: "Sonora, Mexico",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Hope Bay",
+    ownership: [{ owner: C.AgnicoEagle, ownership: 100 }],
+    location: "Nunavut, Canada",
+    commodity: ["Gold"],
+    stage: "Exploration",
+  },
+  {
+    name: "Ad Duwayhi",
+    ownership: [{ owner: C.Maaden, ownership: 100 }],
+    location: "Makkah Region, Saudi Arabia",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Mansourah-Massarah",
+    ownership: [{ owner: C.Maaden, ownership: 100 }],
+    location: "Makkah Region, Saudi Arabia",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Mahd Ad Dhahab",
+    ownership: [{ owner: C.Maaden, ownership: 100 }],
+    location: "Al Madinah Region, Saudi Arabia",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Al Amar",
+    ownership: [{ owner: C.Maaden, ownership: 100 }],
+    location: "Riyadh Region, Saudi Arabia",
+    commodity: ["Gold", "Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Bulghah & Sukhaybarat",
+    ownership: [{ owner: C.Maaden, ownership: 100 }],
+    location: "Al Madinah Region, Saudi Arabia",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "As Suq",
+    ownership: [{ owner: C.Maaden, ownership: 100 }],
+    location: "Makkah Region, Saudi Arabia",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Jabal Sayid",
+    ownership: [
+      { owner: C.Maaden, ownership: 50 },
+      { owner: C.BarrickGold, ownership: 50 },
+    ],
+    location: "Madinah Region, Saudi Arabia",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Al Jalamid",
+    ownership: [
+      { owner: C.Maaden, ownership: 70 },
+      { owner: C.SABIC, ownership: 30 },
+    ],
+    location: "Northern Borders Region, Saudi Arabia",
+    commodity: ["Phosphate"],
+    stage: "Production",
+  },
+  {
+    name: "Al Ba'itha (Bauxite)",
+    ownership: [
+      { owner: C.Maaden, ownership: 74.9 },
+      { owner: C.Alcoa, ownership: 25.1 },
+    ],
+    location: "Al-Qassim Region, Saudi Arabia",
+    commodity: ["Bauxite"],
+    stage: "Production",
+  },
+  {
+    name: "Mutanda",
+    ownership: [
+      { owner: C.Glencore, ownership: 95 },
+      { owner: C.DRCGovernment, ownership: 5 },
+    ],
+    location: "Lualaba, DRC",
+    commodity: ["Copper", "Cobalt"],
+    stage: "Production",
+  },
+  {
+    name: "Kamoto Copper Company (KCC)",
+    ownership: [
+      { owner: C.Glencore, ownership: 75 },
+      { owner: C.Gecamines, ownership: 25 },
+    ],
+    location: "Kolwezi, Lualaba, DRC",
+    commodity: ["Copper", "Cobalt"],
+    stage: "Production",
+  },
+  {
+    name: "Antamina",
+    ownership: [
+      { owner: C.BHP, ownership: 33.75 },
+      { owner: C.Glencore, ownership: 33.75 },
+      { owner: C.Teck, ownership: 22.5 },
+      { owner: C.MitsubishiCorporation, ownership: 10 },
+    ],
+    location: "Ancash, Peru",
+    commodity: ["Copper", "Zinc"],
+    stage: "Production",
+  },
+  {
+    name: "Mount Isa",
+    ownership: [{ owner: C.Glencore, ownership: 100 }],
+    location: "Queensland, Australia",
+    commodity: ["Copper"],
+    stage: "Production",
+  },
+  {
+    name: "McArthur River",
+    ownership: [{ owner: C.Glencore, ownership: 100 }],
+    location: "Northern Territory, Australia",
+    commodity: ["Zinc", "Lead", "Silver"],
+    stage: "Production",
+  },
+  {
+    name: "Boddington",
+    ownership: [{ owner: C.Newmont, ownership: 100 }],
+    location: "Western Australia, Australia",
+    commodity: ["Gold", "Copper"],
+    stage: "Production",
+  },
+  {
+    name: "Tanami",
+    ownership: [{ owner: C.Newmont, ownership: 100 }],
+    location: "Northern Territory, Australia",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Ahafo",
+    ownership: [
+      { owner: C.Newmont, ownership: 90 },
+      { owner: C.GhanaGovernment, ownership: 10 },
+    ],
+    location: "Ahafo, Ghana",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Peñasquito",
+    ownership: [{ owner: C.Newmont, ownership: 100 }],
+    location: "Zacatecas, Mexico",
+    commodity: ["Gold", "Silver", "Zinc", "Lead"],
+    stage: "Production",
+  },
+  {
+    name: "Merian",
+    ownership: [
+      { owner: C.Newmont, ownership: 75 },
+      { owner: C.StaatsolieSurinames, ownership: 25 },
+    ],
+    location: "Sipaliwini, Suriname",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Pueblo Viejo",
+    ownership: [
+      { owner: C.BarrickGold, ownership: 60 },
+      { owner: C.Newmont, ownership: 40 },
+    ],
+    location: "Sánchez Ramírez, Dominican Republic",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Nevada Gold Mines (complex)",
+    ownership: [
+      { owner: C.BarrickGold, ownership: 61.5 },
+      { owner: C.Newmont, ownership: 38.5 },
+    ],
+    location: "Nevada, USA",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Loulo-Gounkoto",
+    ownership: [
+      { owner: C.BarrickGold, ownership: 80 },
+      { owner: C.MaliGovernment, ownership: 20 },
+    ],
+    location: "Kayes, Mali",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Kibali",
+    ownership: [
+      { owner: C.BarrickGold, ownership: 45 },
+      { owner: C.AngloGoldAshanti, ownership: 45 },
+      { owner: C.Sokimo, ownership: 10 },
+    ],
+    location: "Haut-Uele, DRC",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Veladero",
+    ownership: [
+      { owner: C.BarrickGold, ownership: 50 },
+      { owner: C.ShandongGold, ownership: 50 },
+    ],
+    location: "San Juan, Argentina",
+    commodity: ["Gold", "Silver"],
+    stage: "Production",
+  },
+  {
+    name: "North Mara",
+    ownership: [
+      { owner: C.BarrickGold, ownership: 84 },
+      { owner: C.TanzaniaGovernment, ownership: 16 },
+    ],
+    location: "Mara, Tanzania",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Bulyanhulu",
+    ownership: [
+      { owner: C.BarrickGold, ownership: 84 },
+      { owner: C.TanzaniaGovernment, ownership: 16 },
+    ],
+    location: "Shinyanga, Tanzania",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Cloudbreak",
+    ownership: [{ owner: C.Fortescue, ownership: 100 }],
+    location: "Pilbara, Western Australia",
+    commodity: ["Iron Ore"],
+    stage: "Production",
+  },
+  {
+    name: "Christmas Creek",
+    ownership: [{ owner: C.Fortescue, ownership: 100 }],
+    location: "Pilbara, Western Australia",
+    commodity: ["Iron Ore"],
+    stage: "Production",
+  },
+  {
+    name: "Kings Valley (Solomon Hub)",
+    ownership: [{ owner: C.Fortescue, ownership: 100 }],
+    location: "Pilbara, Western Australia",
+    commodity: ["Iron Ore"],
+    stage: "Production",
+  },
+  {
+    name: "Firetail (Solomon Hub)",
+    ownership: [{ owner: C.Fortescue, ownership: 100 }],
+    location: "Pilbara, Western Australia",
+    commodity: ["Iron Ore"],
+    stage: "Production",
+  },
+  {
+    name: "Eliwana",
+    ownership: [{ owner: C.Fortescue, ownership: 100 }],
+    location: "Pilbara, Western Australia",
+    commodity: ["Iron Ore"],
+    stage: "Production",
+  },
+  {
+    name: "Iron Bridge",
+    ownership: [
+      { owner: C.Fortescue, ownership: 69 },
+      { owner: C.FormosaSteel, ownership: 31 },
+    ],
+    location: "Pilbara, Western Australia",
+    commodity: ["Iron Ore (Magnetite)"],
+    stage: "Production",
+  },
+  {
+    name: "Cigar Lake",
+    ownership: [
+      { owner: C.Cameco, ownership: 54.547 },
+      { owner: C.Orano, ownership: 40.453 },
+      { owner: C.TEPCOResources, ownership: 5 },
+    ],
+    location: "Saskatchewan, Canada",
+    commodity: ["Uranium"],
+    stage: "Production",
+  },
+  {
+    name: "McArthur River",
+    ownership: [
+      { owner: C.Cameco, ownership: 69.805 },
+      { owner: C.Orano, ownership: 30.195 },
+    ],
+    location: "Saskatchewan, Canada",
+    commodity: ["Uranium"],
+    stage: "Production",
+  },
+  {
+    name: "Inkai",
+    ownership: [
+      { owner: C.Cameco, ownership: 40 },
+      { owner: C.Kazatomprom, ownership: 60 },
+    ],
+    location: "Turkestan Region, Kazakhstan",
+    commodity: ["Uranium"],
+    stage: "Production",
+  },
+  {
+    name: "Rabbit Lake",
+    ownership: [{ owner: C.Cameco, ownership: 100 }],
+    location: "Saskatchewan, Canada",
+    commodity: ["Uranium"],
+    stage: "Care & Maintenance",
+  },
+  {
+    name: "South Deep",
+    ownership: [
+      { owner: C.GoldFields, ownership: 96.43 },
+      { owner: C.BEEPartners, ownership: 3.57 },
+    ],
+    location: "Gauteng, South Africa",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Tarkwa",
+    ownership: [
+      { owner: C.GoldFields, ownership: 90 },
+      { owner: C.GhanaGovernment, ownership: 10 },
+    ],
+    location: "Western Region, Ghana",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Damang",
+    ownership: [
+      { owner: C.GoldFields, ownership: 90 },
+      { owner: C.GhanaGovernment, ownership: 10 },
+    ],
+    location: "Western Region, Ghana",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Salares Norte",
+    ownership: [{ owner: C.GoldFields, ownership: 100 }],
+    location: "Atacama, Chile",
+    commodity: ["Gold", "Silver"],
+    stage: "Production",
+  },
+  {
+    name: "St Ives",
+    ownership: [{ owner: C.GoldFields, ownership: 100 }],
+    location: "Western Australia, Australia",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Granny Smith",
+    ownership: [{ owner: C.GoldFields, ownership: 100 }],
+    location: "Western Australia, Australia",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Agnew",
+    ownership: [{ owner: C.GoldFields, ownership: 100 }],
+    location: "Western Australia, Australia",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Gruyere",
+    ownership: [
+      { owner: C.GoldFields, ownership: 50 },
+      { owner: C.GoldRoad, ownership: 50 },
+    ],
+    location: "Western Australia, Australia",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Cerro Corona",
+    ownership: [
+      { owner: C.GoldFields, ownership: 99.53 },
+      { owner: C.MinorityShareholders, ownership: 0.47 },
+    ],
+    location: "Cajamarca, Peru",
+    commodity: ["Gold", "Copper"],
+    stage: "Production",
+  },
   //   {
   //     name: "",
   //     ownership: [{ owner: C., ownership:  }],
