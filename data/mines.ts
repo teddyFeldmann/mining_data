@@ -48,13 +48,6 @@ export const mines: Mine[] = [
     stage: "Production",
   },
   {
-    name: "South Deep",
-    ownership: [{ owner: C.GoldFields, ownership: 100 }],
-    location: "Gauteng, South Africa",
-    commodity: ["Gold"],
-    stage: "Production",
-  },
-  {
     name: "Greenbushes",
     ownership: [
       { owner: C.TianqiLithium, ownership: 51 },
@@ -1209,7 +1202,7 @@ export const mines: Mine[] = [
     stage: "Production",
   },
   {
-    name: "McArthur River",
+    name: "McArthur River/Key Lake",
     ownership: [
       { owner: C.Cameco, ownership: 69.805 },
       { owner: C.Orano, ownership: 30.195 },

@@ -1,11 +1,11 @@
 import type { Company } from "./interfaces";
 
 export const Companies = {
-  RioTinto: { name: "Rio Tinto" },
-  BHP: { name: "BHP" },
+  RioTinto: { name: "Rio Tinto", primaryListing: ["RIO.AX", "RIO.L"], secondaryListing: ["RIO"] },
+  BHP: { name: "BHP", primaryListing: ["BHP.AX"], secondaryListing: ["BHP.L", "BHP", "BHPLF", "BHP.F"] },
   JECO: { name: "JECO" },
-  MPMaterials: { name: "MP Materials" },
-  LithiumAmericas: { name: "Lithium Americas" },
+  MPMaterials: { name: "MP Materials", primaryListing: ["MP"] },
+  LithiumAmericas: { name: "Lithium Americas", secondaryListing: ["LAC", "LAC.TO"] },
   BaotouSteelRareEarthGroup: { name: "Baotou Steel Rare Earth Group" },
   LynasRareEarths: { name: "Lynas Rare Earths" },
   Inalum: { name: "Inalum" },
@@ -31,7 +31,7 @@ export const Companies = {
   CodelcoMitsuiJV: { name: "Codelco-Mitsui (Becrux JV)" },
   MitsubishiCorporation: { name: "Mitsubishi Corporation" },
   JapaneseMitsuiJV: { name: "Japanese consortium (led by Mitsui)" },
-  Glencore: { name: "Glencore" },
+  Glencore: { name: "Glencore", primaryListing: ["GLEN.L"], secondaryListing: ["GLEN.JO", "GLNCY"] },
   MitsubishiDevelopment: { name: "Mitsubishi Development" },
   Itochu: { name: "ITOCHU" },
   MitsuiItochuIron: { name: "Mitsui-ITOCHU Iron" },
@@ -43,7 +43,7 @@ export const Companies = {
   ChinaBaowuSteelGroup: { name: "China Baowu Steel Group" },
   HancockProspecting: { name: "Hancock Prospecting" },
   NipponSteel: { name: "Nippon Steel" },
-  ValterraPlatinum: { name: "Valterra Platinum" },
+  ValterraPlatinum: { name: "Valterra Platinum", primaryListing: ["VAL.JO"], secondaryListing: ["VALT.L"] },
   AfricanRainbowMinerals: { name: "African Rainbow Minerals" },
   ModikwaCommunities: { name: "Modikwa Communities" },
   SumitomoMetalMiningArizona: { name: "Sumitomo Metal Mining Arizona Inc." },

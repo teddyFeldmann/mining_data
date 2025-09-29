@@ -1,21 +1,69 @@
 import Link from "next/link";
 import { mines } from "../../../data/mines";
+import { companiesList } from "../../../data/companies";
 import { companySlug } from "@/utils/utils";
 import { DataTable, type Column } from "@/components/DataTable";
 
-type Row = { name: string; count: number; slug: string };
+type Row = {
+  name: string;
+  count: number;
+  slug: string;
+  primary?: string[];
+  secondary?: string[];
+};
 
 function getCompanyCounts(): Row[] {
-  const map = new Map<string, number>();
+  const counts = new Map<string, number>();
   for (const m of mines) {
     for (const o of m.ownership) {
       const name = o.owner.name;
-      map.set(name, (map.get(name) ?? 0) + 1);
+      counts.set(name, (counts.get(name) ?? 0) + 1);
     }
   }
-  return Array.from(map.entries())
-    .map(([name, count]) => ({ name, count, slug: companySlug(name) }))
+
+  return Array.from(counts.entries())
+    .map(([name, count]) => {
+      const company = companiesList.find((c) => c.name === name);
+      return {
+        name,
+        count,
+        slug: companySlug(name),
+        primary: company?.primaryListing ?? [],
+        secondary: company?.secondaryListing ?? [],
+      };
+    })
     .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+}
+
+function ListingsCell({
+  primary = [],
+  secondary = [],
+}: {
+  primary?: string[];
+  secondary?: string[];
+}) {
+  const items = [
+    ...primary.map((s) => ({ s, bold: true })),
+    ...secondary.map((s) => ({ s, bold: false })),
+  ];
+  if (items.length === 0) return <>—</>;
+  return (
+    <>
+      {items.map(({ s, bold }, i) => (
+        <span key={s}>
+          <a
+            href={`https://finance.yahoo.com/quote/${encodeURIComponent(s)}/`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:no-underline"
+          >
+            <span className={bold ? "font-semibold" : ""}>{s}</span>
+          </a>
+          {i < items.length - 1 ? ", " : ""}
+        </span>
+      ))}
+    </>
+  );
 }
 
 const columns: Column<Row>[] = [
@@ -28,6 +76,7 @@ const columns: Column<Row>[] = [
     ),
   },
   { header: "Mines", cell: (r) => r.count.toString(), thClassName: "w-24" },
+  { header: "Listings", cell: (r) => <ListingsCell primary={r.primary} secondary={r.secondary} /> },
 ];
 
 export default function CompaniesIndexPage() {

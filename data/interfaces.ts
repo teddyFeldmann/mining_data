@@ -8,6 +8,8 @@ export interface Mine {
 
 export interface Company {
     name: string;
+    primaryListing?: string[];
+    secondaryListing?: string[];
 }
 
 export interface Ownership {
