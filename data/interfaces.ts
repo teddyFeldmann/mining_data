@@ -5,6 +5,8 @@ export interface Mine {
   commodity: string[];
   stage: string;
   complex?: Complex;
+  lat?: number;
+  lng?: number;
 }
 
 export interface Company {

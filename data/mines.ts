@@ -9,6 +9,8 @@ export const mines: Mine[] = [
     location: "California, USA",
     commodity: ["Rare Earths"],
     stage: "Production",
+    lat: 35.478039,
+    lng: -115.533145
   },
   {
     name: "Bayan Obo",
@@ -766,7 +768,7 @@ export const mines: Mine[] = [
     name: "Santo Domingo",
     ownership: [{ owner: C.CapstoneCopper, ownership: 100 }],
     location: "Atacama, Chile",
-    commodity: ["Copper", "Iron", "Gold"],
+    commodity: ["Copper", "Iron Ore", "Gold"],
     stage: "Exploration",
   },
   {
@@ -1171,7 +1173,7 @@ export const mines: Mine[] = [
       { owner: C.FormosaSteel, ownership: 31 },
     ],
     location: "Pilbara, Western Australia",
-    commodity: ["Iron Ore (Magnetite)"],
+    commodity: ["Iron Ore"],
     stage: "Production",
   },
   {

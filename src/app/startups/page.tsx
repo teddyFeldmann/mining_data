@@ -1,11 +1,36 @@
-import { StartupsList } from "../../../data/startups";
+import { supabaseServer } from "@/lib/supabase";
 
-export default function StartupsPage() {
+type StartupRow = {
+  name: string;
+  website: string | null;
+};
+
+export const dynamic = "force-dynamic"; // always fetch fresh; or use `export const revalidate = 60`
+
+export default async function StartupsPage() {
+  const supabase = supabaseServer();
+  const { data, error } = await supabase
+    .from("startups")
+    .select("name, website")
+    .order("name", { ascending: true });
+
+  if (error) {
+    console.error(error);
+    return (
+      <section className="p-6">
+        <h1 className="text-2xl font-bold mb-4">Mining Startups</h1>
+        <p className="text-sm text-red-600">Failed to load startups.</p>
+      </section>
+    );
+  }
+
+  const rows: StartupRow[] = data ?? [];
+
   return (
     <section className="p-6">
       <h1 className="text-2xl font-bold mb-4">Mining Startups</h1>
       <ul className="space-y-2">
-        {StartupsList.map((s) => (
+        {rows.map((s) => (
           <li key={s.name}>
             {s.website ? (
               <a

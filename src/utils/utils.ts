@@ -18,6 +18,7 @@ export const slugify = (name: string) =>
 
 export const companySlug = slugify;
 export const commoditySlug = slugify;
+export const mineSlug = slugify;
 
 // NEW: source ownership from complex if present; else from mine; else empty
 export const getEffectiveOwnership = (mine: Mine): Ownership[] =>

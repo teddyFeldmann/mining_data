@@ -13,8 +13,15 @@ export default function NavBar() {
         <Link href="/commodities" className="font-medium hover:text-black">
           Commodities
         </Link>
-        <Link href="/startups" className="font-medium hover:text-black">Startups</Link>
-        <Link href="/equipment" className="font-medium hover:text-black">Equipment</Link>
+        <Link href="/map" className="font-medium hover:text-black">
+          Map
+        </Link>
+        <Link href="/startups" className="font-medium hover:text-black">
+          Startups
+        </Link>
+        <Link href="/equipment" className="font-medium hover:text-black">
+          Equipment
+        </Link>
       </nav>
     </header>
   );
