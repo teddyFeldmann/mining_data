@@ -1,7 +1,10 @@
-"use client";
+import dynamic from "next/dynamic";
+import { mines } from "../../../data/mines";
 
-import MinesMap from "@/components/MinesMap";
-import { mines } from "../../../data/mines"; // adjust path if needed
+const MinesMap = dynamic(() => import("@/components/MinesMap"), {
+  ssr: false,
+  loading: () => <div className="h-[70vh] grid place-items-center">Loading map…</div>,
+});
 
 export default function MapPage() {
   return (

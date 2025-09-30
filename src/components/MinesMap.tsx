@@ -3,13 +3,19 @@
 
 import Link from "next/link";
 import { useEffect, useMemo } from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMap, LayersControl } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  useMap,
+  LayersControl,
+} from "react-leaflet";
 import type { Mine } from "../../data/interfaces";
-import { mineSlug } from "@/utils/utils"; // add this helper
+import { mineSlug } from "@/utils/utils";
 import L from "leaflet";
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
+// Use icons from /public to avoid any-casts and bundler issues
 const DefaultIcon = L.icon({
   iconUrl: "/leaflet/marker-icon.png",
   shadowUrl: "/leaflet/marker-shadow.png",
@@ -68,10 +74,7 @@ export default function MinesMap({ mines }: { mines: Mine[] }) {
               <Popup>
                 <div className="space-y-1">
                   <div className="font-semibold">
-                    <Link
-                      href={`/mines/${mineSlug(m.name)}`}
-                      className="underline hover:no-underline"
-                    >
+                    <Link href={`/mines/${mineSlug(m.name)}`} className="underline hover:no-underline">
                       {m.name}
                     </Link>
                     {m.complex?.name ? <> ({m.complex.name})</> : null}
