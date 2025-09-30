@@ -26,6 +26,7 @@ export interface Complex {
 export interface EquipmentCompany {
   name: string;
   products: string[];
+  website: string;
 }
 
 export interface FundingRound {
