@@ -9,8 +9,7 @@ export const Companies = {
   BaotouSteelRareEarthGroup: { name: "Baotou Steel Rare Earth Group" },
   LynasRareEarths: { name: "Lynas Rare Earths" },
   Inalum: { name: "Inalum" },
-  FreeportMcMoRan: { name: "Freeport-McMoRan" },
-  NevadaGoldMines: { name: "Nevada Gold Mines" },
+  FreeportMcMoRan: { name: "Freeport-McMoRan", primaryListing: ["FCX"] },
   NavoiMiningAndMetallurgyCombinat: {
     name: "Navoi Mining & Metallurgy Combinat",
   },
@@ -59,13 +58,13 @@ export const Companies = {
   CapstoneCopper: { name: "Capstone Copper" },
   MitsubishiMaterials: { name: "Mitsubishi Materials Corporation" },
   SouthernCopper: { name: "Southern Copper" },
-  AgnicoEagle: { name: "Agnico Eagle" },
+  AgnicoEagle: { name: "Agnico Eagle", primaryListing: ["AEM", "AEM.TO"] },
   Maaden: { name: "Ma'aden" },
-  BarrickGold: { name: "Barrick Gold" },
+  BarrickGold: { name: "Barrick Gold", primaryListing: ["B", "ABX.TO"] },
   SABIC: { name: "SABIC" },
   Alcoa: { name: "Alcoa (AWA Saudi Limited)" },
   Teck: { name: "Teck Resources" },
-  Newmont: { name: "Newmont" },
+  Newmont: { name: "Newmont", primaryListing: ["NEM"] },
   GhanaGovernment: { name: "Government of Ghana" },
   StaatsolieSurinames: { name: "Staatsolie (Suriname)" },
   MaliGovernment: { name: "Government of Mali" },
@@ -81,7 +80,8 @@ export const Companies = {
   Kazatomprom: { name: "Kazatomprom" },
   BEEPartners: { name: "BEE Partners" },
   GoldRoad: { name: "Gold Road Resources" },
-  MinorityShareholders: { name: "Minority Shareholders" }
+  MinorityShareholders: { name: "Minority Shareholders" },
+  EnergyFuels: { name: "Energy Fuels", primaryListing: ["UUUU"], secondaryListing: ["EFR.TO"]}
 } as const satisfies Record<string, Company>;
 
 export type CompanyKey = keyof typeof Companies;

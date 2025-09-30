@@ -2,12 +2,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { mines } from "../../../../data/mines";
-import { companySlug, formatPercent } from "../../../utils/utils";
+import { companySlug, formatPercent, getEffectiveOwnership } from "../../../utils/utils";
 import { DataTable, type Column } from "../../../components/DataTable";
 
 // Build a slug → company-name(s) index from the data
 const allCompanyNames = Array.from(
-  new Set(mines.flatMap((m) => m.ownership.map((o) => o.owner.name)))
+  new Set(
+    mines.flatMap((m) => getEffectiveOwnership(m).map((o) => o.owner.name))
+  )
 );
 
 const slugToNames = new Map<string, string[]>();
@@ -26,11 +28,19 @@ export function generateStaticParams() {
 type Row = { mine: (typeof mines)[number]; percent: number };
 
 const columns: Column<Row>[] = [
-  { header: "Mine",      cell: (r) => <strong>{r.mine.name}</strong> },
+  {
+    header: "Mine",
+    cell: (r) => (
+      <span>
+        <strong>{r.mine.name}</strong>
+        {r.mine.complex?.name ? <> ({r.mine.complex.name})</> : null}
+      </span>
+    ),
+  },
   { header: "Location",  cell: (r) => r.mine.location },
   { header: "Commodity", cell: (r) => r.mine.commodity.join(", ") },
-  { header: "Stake",     cell: (r) => formatPercent(r.percent) },
-  { header: "Stage", cell: (r) => r.mine.stage },
+  { header: "Stake",     cell: (r) => formatPercent(r.percent), thClassName: "w-24" },
+  { header: "Stage",     cell: (r) => r.mine.stage ?? "—" },
 ];
 
 export default function CompanyPage({ params }: { params: { slug: string } }) {
@@ -40,11 +50,11 @@ export default function CompanyPage({ params }: { params: { slug: string } }) {
   const displayName = names[0];
 
   const rows: Row[] = mines
-    .map((m) => {
-      const entry = m.ownership.find((o) => names.includes(o.owner.name));
-      return entry ? { mine: m, percent: entry.ownership } : null;
-    })
-    .filter(Boolean) as Row[];
+  .map((m) => {
+    const entry = getEffectiveOwnership(m).find((o) => names.includes(o.owner.name));
+    return entry ? { mine: m, percent: entry.ownership } : null;
+  })
+  .filter(Boolean) as Row[];
 
   return (
     <main className="p-6 space-y-4">

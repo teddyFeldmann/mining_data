@@ -1,9 +1,10 @@
 export interface Mine {
   name: string;
-  ownership: Ownership[];
+  ownership?: Ownership[];
   location: string;
   commodity: string[];
   stage: string;
+  complex?: Complex;
 }
 
 export interface Company {
@@ -15,4 +16,25 @@ export interface Company {
 export interface Ownership {
     owner: Company,
     ownership: number
+}
+
+export interface Complex {
+  name: string;
+  ownership: Ownership[];
+}
+
+export interface EquipmentCompany {
+  name: string;
+  products: string[];
+}
+
+export interface FundingRound {
+  roundName: string;
+  amount: number;
+}
+
+export interface Startup {
+  name: string;
+  funding?: FundingRound[];
+  website?: string;
 }

@@ -1,5 +1,6 @@
 import type { Mine } from "./interfaces";
 import { Companies as C } from "./companies";
+import { Complexes as Complex } from "./complexes";
 
 export const mines: Mine[] = [
   {
@@ -31,13 +32,6 @@ export const mines: Mine[] = [
     ],
     location: "Papua, Indonesia",
     commodity: ["Copper", "Gold"],
-    stage: "Production",
-  },
-  {
-    name: "Carlin Trend",
-    ownership: [{ owner: C.NevadaGoldMines, ownership: 100 }],
-    location: "Nevada, USA",
-    commodity: ["Gold"],
     stage: "Production",
   },
   {
@@ -1085,16 +1079,6 @@ export const mines: Mine[] = [
     stage: "Production",
   },
   {
-    name: "Nevada Gold Mines (complex)",
-    ownership: [
-      { owner: C.BarrickGold, ownership: 61.5 },
-      { owner: C.Newmont, ownership: 38.5 },
-    ],
-    location: "Nevada, USA",
-    commodity: ["Gold"],
-    stage: "Production",
-  },
-  {
     name: "Loulo-Gounkoto",
     ownership: [
       { owner: C.BarrickGold, ownership: 80 },
@@ -1306,10 +1290,137 @@ export const mines: Mine[] = [
     commodity: ["Gold", "Copper"],
     stage: "Production",
   },
-  //   {
-  //     name: "",
-  //     ownership: [{ owner: C., ownership:  }],
-  //     location: "",
-  //     commodity:
-  //   },
+  {
+    name: "Cortez",
+    complex: Complex.NevadaGoldMines,
+    location: "Nevada, USA",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Carlin",
+    complex: Complex.NevadaGoldMines,
+    location: "Nevada, USA",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Turquoise Ridge",
+    complex: Complex.NevadaGoldMines,
+    location: "Nevada, USA",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Phoenix",
+    complex: Complex.NevadaGoldMines,
+    location: "Nevada, USA",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Long Canyon",
+    complex: Complex.NevadaGoldMines,
+    location: "Nevada, USA",
+    commodity: ["Gold"],
+    stage: "Production",
+  },
+  {
+    name: "Pinyon Plain Mine",
+    ownership: [{ owner: C.EnergyFuels, ownership: 100 }],
+    location: "Coconino County, Arizona, USA",
+    commodity: ["Uranium"],
+    stage: "Production",
+  },
+  {
+    name: "La Sal Mine",
+    complex: Complex.LaSal,
+    location: "San Juan County, Utah, USA",
+    commodity: ["Uranium", "Vanadium"],
+    stage: "Production",
+  },
+  {
+    name: "Pandora Mine",
+    complex: Complex.LaSal,
+    location: "San Juan County, Utah, USA",
+    commodity: ["Uranium", "Vanadium"],
+    stage: "Production",
+  },
+  {
+    name: "Beaver Mine",
+    complex: Complex.LaSal,
+    location: "San Juan County, Utah, USA",
+    commodity: ["Uranium", "Vanadium"],
+    stage: "Production",
+  },
+  {
+    name: "Energy Queen Mine",
+    complex: Complex.LaSal,
+    location: "San Juan County, Utah, USA",
+    commodity: ["Uranium", "Vanadium"],
+    stage: "Permitted",
+  },
+  {
+    name: "Redd Block Project",
+    complex: Complex.LaSal,
+    location: "San Juan County, Utah, USA",
+    commodity: ["Uranium", "Vanadium"],
+    stage: "Permitted",
+  },
+  {
+    name: "Whirlwind Mine",
+    ownership: [{ owner: C.EnergyFuels, ownership: 100 }],
+    location: "Mesa County, Colorado / Grand County, Utah, USA",
+    commodity: ["Uranium", "Vanadium"],
+    stage: "Preparing",
+  },
+  {
+    name: "Nichols Ranch ISR Mine & Plant",
+    ownership: [{ owner: C.EnergyFuels, ownership: 100 }],
+    location: "Powder River Basin, Wyoming, USA",
+    commodity: ["Uranium"],
+    stage: "Standby / Preparing",
+  },
+  {
+    name: "Jane Dough Project",
+    ownership: [{ owner: C.EnergyFuels, ownership: 100 }],
+    location: "Powder River Basin (adjacent to Nichols Ranch), Wyoming, USA",
+    commodity: ["Uranium"],
+    stage: "Permitted",
+  },
+  {
+    name: "Hank Project",
+    ownership: [{ owner: C.EnergyFuels, ownership: 100 }],
+    location: "Powder River Basin, Wyoming, USA",
+    commodity: ["Uranium"],
+    stage: "Permitted",
+  },
+  {
+    name: "Sheep Mountain Project",
+    ownership: [{ owner: C.EnergyFuels, ownership: 100 }],
+    location: "Fremont County, Wyoming, USA",
+    commodity: ["Uranium"],
+    stage: "Permitted",
+  },
+  {
+    name: "Roca Honda Project",
+    ownership: [{ owner: C.EnergyFuels, ownership: 100 }],
+    location: "McKinley County, New Mexico, USA",
+    commodity: ["Uranium"],
+    stage: "Permitting",
+  },
+  {
+    name: "Bullfrog Project Complex",
+    ownership: [{ owner: C.EnergyFuels, ownership: 100 }],
+    location: "Southeastern Utah, USA",
+    commodity: ["Uranium"],
+    stage: "Exploration",
+  },
+  // {
+  //   name: "",
+  //   ownership: [{ owner: C., ownership:  }],
+  //   location: "",
+  //   commodity:
+  //   stage:
+  // },
 ];

@@ -14,9 +14,14 @@ type Row = {
 
 function getCompanyCounts(): Row[] {
   const counts = new Map<string, number>();
+
   for (const m of mines) {
-    for (const o of m.ownership) {
-      const name = o.owner.name;
+    // Use complex ownership if present; else mine ownership; else none
+    const effective = m.complex?.ownership ?? m.ownership ?? [];
+
+    // De-dupe company names per mine before counting
+    const names = new Set(effective.map((o) => o.owner.name));
+    for (const name of names) {
       counts.set(name, (counts.get(name) ?? 0) + 1);
     }
   }

@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { mines } from "../../../../data/mines";
-import { commoditySlug, formatOwnershipInline } from "@/utils/utils";
+import { commoditySlug } from "@/utils/utils";
 import { DataTable, type Column } from "@/components/DataTable";
+import OwnershipCell from "@/components/OwnershipCell";
 
 const allCommodityNames = Array.from(new Set(mines.flatMap((m) => m.commodity)));
 
@@ -25,7 +26,7 @@ const columns: Column<Row>[] = [
   { header: "Location",  cell: (m) => m.location },
   { header: "Commodity", cell: (m) => m.commodity.join(", ") },
   { header: "Stage",     cell: (m) => m.stage ?? "—" },
-  { header: "Ownership", cell: (m) => formatOwnershipInline(m.ownership) },
+  { header: "Ownership", cell: (m) => <OwnershipCell mine={m} /> },
 ];
 
 export default function CommodityPage({ params }: { params: { slug: string } }) {
