@@ -1,20 +1,40 @@
+// src/app/commodities/page.tsx
 import Link from "next/link";
-import { mines } from "../../../data/mines";
+import { supabaseServer } from "@/lib/supabase";
 import { commoditySlug } from "@/utils/utils";
 import { DataTable, type Column } from "@/components/DataTable";
 
+type MCRow = { commodity_name: string; mine_id: string };
 type Row = { name: string; count: number; slug: string };
 
-function getCommodityCounts(): Row[] {
-  const map = new Map<string, number>();
-  for (const m of mines) {
-    for (const c of m.commodity) {
-      map.set(c, (map.get(c) ?? 0) + 1);
-    }
+export const revalidate = 60; // or: export const dynamic = "force-dynamic";
+
+async function getCommodityCounts(): Promise<Row[]> {
+  const sb = supabaseServer();
+  const { data, error } = await sb
+    .from("mine_commodities")
+    .select("commodity_name, mine_id");
+
+  if (error) throw error;
+
+  // Count DISTINCT mines per commodity
+  const byCommodity = new Map<string, Set<string>>();
+  for (const r of (data ?? []) as MCRow[]) {
+    if (!r.commodity_name || !r.mine_id) continue;
+    const set = byCommodity.get(r.commodity_name) ?? new Set<string>();
+    set.add(r.mine_id);
+    byCommodity.set(r.commodity_name, set);
   }
-  return Array.from(map.entries())
-    .map(([name, count]) => ({ name, count, slug: commoditySlug(name) }))
-    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+
+  const rows: Row[] = Array.from(byCommodity.entries()).map(([name, set]) => ({
+    name,
+    count: set.size,
+    slug: commoditySlug(name),
+  }));
+
+  // Sort: most mines first, then A→Z
+  rows.sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+  return rows;
 }
 
 const columns: Column<Row>[] = [
@@ -29,8 +49,8 @@ const columns: Column<Row>[] = [
   { header: "Mines", cell: (r) => r.count.toString(), thClassName: "w-24" },
 ];
 
-export default function CommoditiesIndexPage() {
-  const rows = getCommodityCounts();
+export default async function CommoditiesIndexPage() {
+  const rows = await getCommodityCounts();
   return (
     <section className="p-6">
       <h1 className="text-2xl font-bold mb-4">Commodities</h1>

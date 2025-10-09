@@ -1,25 +1,33 @@
+// src/app/commodities/[slug]/page.tsx
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { mines } from "../../../../data/mines";
-import { commoditySlug } from "@/utils/utils";
 import { DataTable, type Column } from "@/components/DataTable";
 import OwnershipCell from "@/components/OwnershipCell";
+import { commoditySlug } from "@/utils/utils";
+import { fetchMines } from "@/data/fetchMines";
+import type { Mine } from "@/data/interfaces";
 
-const allCommodityNames = Array.from(new Set(mines.flatMap((m) => m.commodity)));
-
-const slugToNames = new Map<string, string[]>();
-for (const n of allCommodityNames) {
-  const s = commoditySlug(n);
-  const arr = slugToNames.get(s) ?? [];
-  arr.push(n);
-  slugToNames.set(s, arr);
+// build a slug -> names[] map from the current dataset
+function buildSlugMap(mines: Mine[]) {
+  const all = new Set(mines.flatMap((m) => m.commodity));
+  const map = new Map<string, string[]>();
+  for (const name of all) {
+    const slug = commoditySlug(name);
+    const arr = map.get(slug) ?? [];
+    arr.push(name);
+    map.set(slug, arr);
+  }
+  return map;
 }
 
-export function generateStaticParams() {
+// You can make this async in App Router
+export async function generateStaticParams() {
+  const mines = await fetchMines();
+  const slugToNames = buildSlugMap(mines);
   return Array.from(slugToNames.keys()).map((slug) => ({ slug }));
 }
 
-type Row = (typeof mines)[number];
+type Row = Mine;
 
 const columns: Column<Row>[] = [
   { header: "Mine",      cell: (m) => <strong>{m.name}</strong> },
@@ -29,7 +37,10 @@ const columns: Column<Row>[] = [
   { header: "Ownership", cell: (m) => <OwnershipCell mine={m} /> },
 ];
 
-export default function CommodityPage({ params }: { params: { slug: string } }) {
+export default async function CommodityPage({ params }: { params: { slug: string } }) {
+  const mines = await fetchMines();
+  const slugToNames = buildSlugMap(mines);
+
   const names = slugToNames.get(params.slug) ?? [];
   if (!names.length) return notFound();
 

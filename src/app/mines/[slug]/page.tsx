@@ -1,13 +1,19 @@
+// src/app/mines/[slug]/page.tsx
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { mines } from "../../../../data/mines";
-import { companySlug, formatPercent, getEffectiveOwnership, mineSlug } from "../../../utils/utils";
+// import { DataTable, type Column } from "@/components/DataTable"; // only if you plan to add a table later
+import { fetchMines } from "@/data/fetchMines";
+import { companySlug, formatPercent, getEffectiveOwnership, mineSlug } from "@/utils/utils";
+// import type { Mine } from "@/data/interfaces";
 
-export function generateStaticParams() {
+// Pre-render a page for each mine from Supabase
+export async function generateStaticParams() {
+  const mines = await fetchMines();
   return mines.map((m) => ({ slug: mineSlug(m.name) }));
 }
 
-export default function MinePage({ params }: { params: { slug: string } }) {
+export default async function MinePage({ params }: { params: { slug: string } }) {
+  const mines = await fetchMines();
   const mine = mines.find((m) => mineSlug(m.name) === params.slug);
   if (!mine) return notFound();
 
