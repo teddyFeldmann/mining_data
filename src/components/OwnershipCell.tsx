@@ -1,6 +1,6 @@
 // src/ui/OwnershipCell.tsx
 import Link from "next/link";
-import type { Mine } from "../../data/interfaces";
+import type { Mine } from "../data/interfaces";
 import { getEffectiveOwnership, formatPercent, companySlug } from "../utils/utils";
 
 export default function OwnershipCell({ mine }: { mine: Mine }) {

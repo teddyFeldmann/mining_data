@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import type { Mine } from "../../../data/interfaces";
+import type { Mine } from "../../data/interfaces";
 
 const MinesMap = dynamic(() => import("@/components/MinesMap"), {
   ssr: false,

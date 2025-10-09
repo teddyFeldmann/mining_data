@@ -1,4 +1,4 @@
-import type { EquipmentCompany } from "./interfaces";
+import type { EquipmentCompany } from "../src/data/interfaces";
 
 export const EquipmentCompanies = {
     Epiroc: { name: "Epiroc", products: ["drill rigs"], website: "https://www.epiroc.com/"},

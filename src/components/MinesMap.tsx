@@ -11,7 +11,7 @@ import {
   useMap,
   LayersControl,
 } from "react-leaflet";
-import type { Mine } from "../../data/interfaces";
+import type { Mine } from "../data/interfaces";
 import { mineSlug } from "@/utils/utils";
 import L from "leaflet";
 

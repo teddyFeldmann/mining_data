@@ -1,4 +1,4 @@
-import type { Complex } from "./interfaces";
+import type { Complex } from "../src/data/interfaces";
 import { Companies as C } from "./companies";
 
 export const Complexes = {

@@ -1,9 +1,9 @@
 export interface Mine {
   name: string;
-  ownership?: Ownership[];
   location: string;
   commodity: string[];
   stage: string;
+  ownership?: Ownership[];
   complex?: Complex;
   lat?: number;
   lng?: number;
@@ -41,3 +41,4 @@ export interface Startup {
   funding?: FundingRound[];
   website?: string;
 }
+

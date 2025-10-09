@@ -1,4 +1,4 @@
-import { Mine, Ownership } from "../../data/interfaces";
+import { Mine, Ownership } from "../data/interfaces";
 
 // export const companySlug = (name: string) =>
 //   name
