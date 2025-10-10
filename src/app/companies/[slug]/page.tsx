@@ -35,8 +35,6 @@ export default async function CompanyPage({
     { header: "Stage", cell: (r) => r.mine.stage ?? "—" },
   ];
 
-  console.log(rows)
-
   return (
     <main className="p-6 space-y-4">
       <div className="flex items-center justify-between">
