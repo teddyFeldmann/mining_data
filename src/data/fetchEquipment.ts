@@ -1,5 +1,5 @@
 import { supabaseServer } from "@/lib/supabase";
-import type { EquipmentVendor } from "@/data/types";
+import type { EquipmentVendor } from "@/data/interfaces";
 
 export async function fetchEquipment(): Promise<EquipmentVendor[]> {
   const sb = supabaseServer();

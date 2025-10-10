@@ -1,38 +1,23 @@
-// src/app/companies/[slug]/page.tsx
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { fetchMines } from "@/data/fetchMines";
-import { companySlug, formatPercent, getEffectiveOwnership } from "../../../utils/utils";
+import {
+  formatPercent,
+} from "../../../utils/utils";
 import { DataTable, type Column } from "../../../components/DataTable";
+import { fetchMinesByCompany } from "@/data/fetchMinesByCompany";
 
-export async function generateStaticParams() {
-  const mines = await fetchMines();
-  const names = new Set(
-    mines.flatMap((m) => getEffectiveOwnership(m).map((o) => o.owner.name))
-  );
-  return [...names].map((n) => ({ slug: companySlug(n) }));
-}
+type Row = {
+  mine: Awaited<ReturnType<typeof fetchMines>>[number];
+  percent: number;
+};
 
-type Row = { mine: Awaited<ReturnType<typeof fetchMines>>[number]; percent: number };
-
-export default async function CompanyPage({ params }: { params: { slug: string } }) {
-  const mines = await fetchMines();
-  const candidates = new Map<string, string[]>();
-  for (const m of mines) {
-    for (const o of getEffectiveOwnership(m)) {
-      const s = companySlug(o.owner.name);
-      candidates.set(s, [...(candidates.get(s) ?? []), o.owner.name]);
-    }
-  }
-  const names = candidates.get(params.slug) ?? [];
-  if (!names.length) return notFound();
-
-  const rows: Row[] = mines
-    .map((m) => {
-      const entry = getEffectiveOwnership(m).find((o) => names.includes(o.owner.name));
-      return entry ? { mine: m, percent: entry.ownership } : null;
-    })
-    .filter(Boolean) as Row[];
+export default async function CompanyPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const { slug } = await params;
+  const { company, rows } = await fetchMinesByCompany(slug);
 
   const columns: Column<Row>[] = [
     {
@@ -44,17 +29,22 @@ export default async function CompanyPage({ params }: { params: { slug: string }
         </span>
       ),
     },
-    { header: "Location",  cell: (r) => r.mine.location },
+    { header: "Location", cell: (r) => r.mine.location },
     { header: "Commodity", cell: (r) => r.mine.commodity.join(", ") },
-    { header: "Stake",     cell: (r) => formatPercent(r.percent) },
-    { header: "Stage",     cell: (r) => r.mine.stage ?? "—" },
+    { header: "Stake", cell: (r) => formatPercent(r.percent) },
+    { header: "Stage", cell: (r) => r.mine.stage ?? "—" },
   ];
+
+  console.log(rows)
 
   return (
     <main className="p-6 space-y-4">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">{names[0]} — Mines</h1>
-        <Link href="/companies" className="text-sm underline hover:no-underline">
+        <h1 className="text-2xl font-bold">{company} — Mines</h1>
+        <Link
+          href="/companies"
+          className="text-sm underline hover:no-underline"
+        >
           ← Back to companies
         </Link>
       </div>
@@ -62,69 +52,3 @@ export default async function CompanyPage({ params }: { params: { slug: string }
     </main>
   );
 }
-
-
-// // Build a slug → company-name(s) index from the data
-// const allCompanyNames = Array.from(
-//   new Set(
-//     mines.flatMap((m) => getEffectiveOwnership(m).map((o) => o.owner.name))
-//   )
-// );
-
-// const slugToNames = new Map<string, string[]>();
-// for (const n of allCompanyNames) {
-//   const s = companySlug(n);
-//   const arr = slugToNames.get(s) ?? [];
-//   arr.push(n);
-//   slugToNames.set(s, arr);
-// }
-
-// // Pre-render a page for each company
-// export function generateStaticParams() {
-//   return Array.from(slugToNames.keys()).map((slug) => ({ slug }));
-// }
-
-// type Row = { mine: (typeof mines)[number]; percent: number };
-
-// const columns: Column<Row>[] = [
-//   {
-//     header: "Mine",
-//     cell: (r) => (
-//       <span>
-//         <strong>{r.mine.name}</strong>
-//         {r.mine.complex?.name ? <> ({r.mine.complex.name})</> : null}
-//       </span>
-//     ),
-//   },
-//   { header: "Location",  cell: (r) => r.mine.location },
-//   { header: "Commodity", cell: (r) => r.mine.commodity.join(", ") },
-//   { header: "Stake",     cell: (r) => formatPercent(r.percent), thClassName: "w-24" },
-//   { header: "Stage",     cell: (r) => r.mine.stage ?? "—" },
-// ];
-
-// export default function CompanyPage({ params }: { params: { slug: string } }) {
-//   const names = slugToNames.get(params.slug) ?? [];
-//   if (!names.length) return notFound();
-
-//   const displayName = names[0];
-
-//   const rows: Row[] = mines
-//   .map((m) => {
-//     const entry = getEffectiveOwnership(m).find((o) => names.includes(o.owner.name));
-//     return entry ? { mine: m, percent: entry.ownership } : null;
-//   })
-//   .filter(Boolean) as Row[];
-
-//   return (
-//     <main className="p-6 space-y-4">
-//       <div className="flex items-center justify-between">
-//         <h1 className="text-2xl font-bold">{displayName} — Mines</h1>
-//         <Link href="/" className="text-sm underline hover:no-underline">
-//           ← Back to all mines
-//         </Link>
-//       </div>
-
-//       <DataTable columns={columns} data={rows} getRowKey={(r) => r.mine.name} />
-//     </main>
-//   );
-// }

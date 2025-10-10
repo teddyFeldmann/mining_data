@@ -1,3 +1,5 @@
+import { fetchMines } from "./fetchMines";
+
 export interface Mine {
   name: string;
   location: string;
@@ -10,14 +12,14 @@ export interface Mine {
 }
 
 export interface Company {
-    name: string;
-    primaryListing?: string[];
-    secondaryListing?: string[];
+  name: string;
+  primaryListing?: string[];
+  secondaryListing?: string[];
 }
 
 export interface Ownership {
-    owner: Company,
-    ownership: number
+  owner: Company;
+  ownership: number;
 }
 
 export interface Complex {
@@ -42,3 +44,15 @@ export interface Startup {
   website?: string;
 }
 
+export interface EquipmentVendor {
+  name: string;
+  website: string | null;
+  products: string[] | null;
+}
+
+export type MineRow = {
+  mine: Awaited<ReturnType<typeof fetchMines>>[number];
+  percent: number;
+};
+
+export type MinesByCompany = { rows: MineRow[]; company: string };
