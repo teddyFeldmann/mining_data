@@ -10,7 +10,7 @@ type Row = {
   secondary?: string[];
 };
 
-export const revalidate = 60; // or `export const dynamic = "force-dynamic"`
+export const revalidate = 60;
 
 function ListingsCell({
   primary = [],
