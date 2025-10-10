@@ -39,7 +39,7 @@ export default async function CompanyPage({
     { header: "Commodity",        cell: (p) => p.commodity },
     {
       header: "2024 Production",
-      cell: (p) => fmtNumber(p.production),
+      cell: (p) => `${fmtNumber(p.production)} mt`,
       thClassName: "text-right",
       tdClassName: "text-right",
     },

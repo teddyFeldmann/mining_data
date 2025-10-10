@@ -122,7 +122,7 @@ export default async function CompaniesIndexPage({
   for (const commodity of prodPivot.commodities) {
     columns.push({
       header: `${commodity} (2024)`,
-      cell: (r) => fmtNumber(r.prod?.[commodity]),
+      cell: (r) => r.prod?.[commodity] ? `${fmtNumber(r.prod?.[commodity])} mt` : "",
       thClassName: "text-right",
       tdClassName: "text-right",
     });
