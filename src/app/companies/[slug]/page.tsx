@@ -5,6 +5,8 @@ import {
 } from "../../../utils/utils";
 import { DataTable, type Column } from "../../../components/DataTable";
 import { fetchMinesByCompany } from "@/data/fetchMinesByCompany";
+import MapClient from "@/components/MapClient";
+import { Mine } from "@/data/interfaces";
 
 type Row = {
   mine: Awaited<ReturnType<typeof fetchMines>>[number];
@@ -35,6 +37,8 @@ export default async function CompanyPage({
     { header: "Stage", cell: (r) => r.mine.stage ?? "—" },
   ];
 
+  const mines: Mine[] = rows.map(r => r.mine);
+
   return (
     <main className="p-6 space-y-4">
       <div className="flex items-center justify-between">
@@ -47,6 +51,7 @@ export default async function CompanyPage({
         </Link>
       </div>
       <DataTable columns={columns} data={rows} getRowKey={(r) => r.mine.name} />
+        <MapClient mines={mines} />
     </main>
   );
 }

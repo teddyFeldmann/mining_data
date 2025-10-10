@@ -51,7 +51,7 @@ export interface EquipmentVendor {
 }
 
 export type MineRow = {
-  mine: Awaited<ReturnType<typeof fetchMines>>[number];
+  mine: Mine;
   percent: number;
 };
 
